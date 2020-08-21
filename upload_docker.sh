@@ -11,7 +11,6 @@ dockerpath="joannasprott/mlpredict"
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-# aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 310907231111.dkr.ecr.us-west-2.amazonaws.com
 cat ~/docker-pass.txt | docker login --username=joannasprott --password-stdin
 docker tag mlpredict:latest joannasprott/mlpredict:latest
 
