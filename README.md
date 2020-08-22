@@ -1,9 +1,4 @@
-# project-ml-microservice-kubernetes [![CircleCI](https://circleci.com/gh/JoannaSprottHome/project-ml-microservice-kubernetes.svg?style=shield)](https://app.circleci.com/pipelines/github/JoannaSprottHome/project-ml-microservice-kubernetes)
-
-<img src="images/python-icon-2.jpeg" height="30">
-<img src="images/docker-icon2.jpeg" height="30">
-<img src="images/kubernetes-icon-2.png" height="30">
-<img src="images/circle-ci-icon-2.png" height="30">
+# project-ml-microservice-kubernetes [![CircleCI](https://circleci.com/gh/JoannaSprottHome/project-ml-microservice-kubernetes.svg?style=shield)](https://app.circleci.com/pipelines/github/JoannaSprottHome/project-ml-microservice-kubernetes) 
 
 ## Project Summary  
 
