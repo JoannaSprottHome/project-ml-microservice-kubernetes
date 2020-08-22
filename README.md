@@ -1,29 +1,19 @@
-[![CircleCI](https://circleci.com/gh/JoannaSprottHome/project-ml-microservice-kubernetes.svg?style=shield)](https://app.circleci.com/pipelines/github/JoannaSprottHome/project-ml-microservice-kubernetes)
+# project-ml-microservice-kubernetes [![CircleCI](https://circleci.com/gh/JoannaSprottHome/project-ml-microservice-kubernetes.svg?style=shield)](https://app.circleci.com/pipelines/github/JoannaSprottHome/project-ml-microservice-kubernetes)
 
-## Project Overview
+<img src="images/python-icon-2.jpeg" height="30">
+<img src="images/docker-icon2.jpeg" height="30">
+<img src="images/kubernetes-icon-2.png" height="30">
+<img src="images/circle-ci-icon-2.png" height="30">
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+## Project Summary  
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+This project contains a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The data set was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). The project cocntains a Python flask app `app.py` that serves out predictions (inference) about housing prices through API calls. 
 
-### Project Tasks
+---   
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+## Run Python scripts and web app
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
----
-
-## Setup the Environment
+### Setup the Environment
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
@@ -33,6 +23,15 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Make a prediction: `./make_prediction.sh`
+```Port: 8000
+{
+    "prediction": [
+        20.35373177134412
+    ]
+}
+```
+5. Web app located at: `http://127.0.0.1:8000/`
 
 ### Kubernetes Steps
 
@@ -40,3 +39,21 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+--- 
+
+## Explanation of files in the repository
+
+The following files and folders are included in the project:
+
+1. `app.py` - flask app with main logic to generate prediction
+2. `model data` - data for running prediction
+3. `Dockerfile` - used to build an image from and run container
+4. `Makefile` - contains the build steps including environment set-up, installation of dependencies and linting
+5. `requirements.txt` - dependencies, that are installed via `Makefile`
+6. `run_docker.sh` - builds image and runs container
+7. `upload_docker.sh` - uploads docker image to Docker hub
+8. `run_kubernetes.sh` - runs the image from Docker hub
+9. `make_prediction.sh` - generates prediction
+10. `docker_out.txt` - contains output after running app with docker and running prediction
+11. `kubernetes_out.txt` - contains output after running app with kubernetes and running prediction
+12. `.circleci/config.yml` - contains the configuration for CI/CD pipeline
