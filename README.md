@@ -9,7 +9,7 @@
 
 ## Project Summary  
 
-This project contains a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The data set was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). The project cocntains a Python flask app `app.py` that serves out predictions (inference) about housing prices through API calls. 
+This project contains a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The data set was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). The project contains a Python flask app `app.py` that serves out predictions (inference) about housing prices through API calls. 
 
 ---   
 
