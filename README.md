@@ -1,5 +1,12 @@
 # project-ml-microservice-kubernetes [![CircleCI](https://circleci.com/gh/JoannaSprottHome/project-ml-microservice-kubernetes.svg?style=shield)](https://app.circleci.com/pipelines/github/JoannaSprottHome/project-ml-microservice-kubernetes) 
 
+<p float="left">
+  <img src="images/python-icon-2.jpeg" width="30" />
+  <img src="images/docker-icon2.jpeg" width="30" /> 
+  <img src="images/kubernetes-icon-2.png" width="30" />
+  <img src="images/circle-ci-icon-2.png" width="30" />
+</p>
+
 ## Project Summary  
 
 This project contains a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The data set was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). The project cocntains a Python flask app `app.py` that serves out predictions (inference) about housing prices through API calls. 
